@@ -122,7 +122,7 @@ luajit_sp = subproject('luajit')
 luajit_inc = luajit_sp.get_variable('incdir')
 deps += luajit_sp.get_variable('luajit_dep')
 
-subdir('subprojects/luabins/src')
+subdir('vendor/luabins/src')
 
 # TODO: csri
 

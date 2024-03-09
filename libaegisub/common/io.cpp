@@ -44,7 +44,7 @@ std::unique_ptr<std::istream> Open(fs::path const& file, bool binary) {
 
 Save::Save(fs::path const& file, bool binary)
 : file_name(file)
-, tmp_name(unique_path(file.parent_path()/(file.stem().string() + "_tmp_%%%%" + file.extension().string())))
+, tmp_name(file.parent_path()/(file.stem().string() + "_tmp" + file.extension().string()))
 {
 	LOG_D("agi/io/save/file") << file;
 
